@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>{{$ctrl.dailyData.day}}</strong></div>
+  <div class="panel-body">
+    <div>High: {{$ctrl.dailyData.high}}&#176;F</div>
+    <div class="u-margin-bottom-20">Low: {{$ctrl.dailyData.low}}&#176;F</div>
+    <ul class="c-hourly-data-list list-group">
+      <li class=list-group-item" ng-repeat="item in $ctrl.dailyData.threeHourData">
+        <w-three-hour-item three-hour-data="item"></w-three-hour-item>
+      </li>
+    </ul>
+  </div>
+</div>

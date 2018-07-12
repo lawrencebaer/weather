@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-6">
+    <p class="u-4-em">{{$ctrl.weatherData.city}}</p>
+    <img class="c-weather-icon--current" src="http://openweathermap.org/img/w/{{$ctrl.weatherData.statusIcon}}.png" />
+    <span class="u-2-em">{{$ctrl.weatherData.status}}</span>
+  </div>
+  <div class="col-sm-6 text-right">
+    <p class="u-4-em">{{$ctrl.weatherData.temp}}&#176;F</p>
+    <p class="u-2-em">High: {{$ctrl.weatherData.high}}&#176;F</p>
+    <p class="u-2-em">Low: {{$ctrl.weatherData.low}}&#176;F</p>
+  </div>
+</div>
+
+

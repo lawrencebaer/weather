@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Weather by Larry</a>
+    </div>
+    <div id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-right">
+        <span class="c-error-text" ng-if="!$ctrl.valid">Invalid location</span>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="City or Zip Code" ng-model="$ctrl.zipCode">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="$ctrl.onClick({zipCode: $ctrl.zipCode})">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

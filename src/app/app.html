@@ -1,0 +1,14 @@
+<main class="c-app {{app.isNight ? 'night' : 'day'}}">
+  <w-header on-click="app.onClick(zipCode)" valid="app.valid"></w-header>
+  <div class="c-blocker" ng-if="app.loading"></div>
+  <div class="c-spinner" ng-if="app.loading"><i class="fa fa-spinner fa-spin"></i></div>
+  <div ng-if="!app.loading">
+    <w-current weather-data="app.weatherData"></w-current>
+    <div class="row col-lg-offset-1">
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2" ng-repeat="item in app.weatherData.forecast">
+        <w-forecast-item daily-data="item"></w-forecast-item>
+      </div>
+    </div>
+  </div>
+  <a class="btn btn-link c-profile-link pull-right" ng-if="!app.loading" ng-href="{{app.url}}">About Larry</a>
+</main>

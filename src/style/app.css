@@ -1,0 +1,108 @@
+body {
+  background: #0147A7;
+  color: #fff;
+}
+
+a {
+  color: #03A9F4;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+}
+
+main.day {
+  background-image: url("../public/img/day.jpg");
+}
+
+main.night {
+  background-image: url("../public/img/night.png");
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/*Classes*/
+.navbar {
+  border-radius: 0;
+}
+
+.panel {
+  color: black;
+  min-height: 440px;
+  opacity: 0.85;
+}
+
+.c-profile-link {
+  color: white;
+}
+
+.c-blocker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.c-weather-icon--forecast {
+  display: inline;
+  margin: -15px;
+}
+
+.c-spinner {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+}
+
+.c-spinner i {
+  font-size: 6em;  text-align: center;
+}
+
+.c-error-text {
+  color: red;
+}
+
+.c-hourly-data-list li {
+  list-style: none;
+}
+
+/*Utilities*/
+.u-4-em {
+  font-size: 4em;
+}
+
+.u-2-em {
+  font-size: 2em;
+}
+
+.u-10-px {
+  font-size: 10px;
+}
+
+.u-margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.u-margin-bottom-10 {
+  margin-bottom: 10px;
+}
