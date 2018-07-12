@@ -7,6 +7,7 @@ import service from './service';
 import '../style/app.css';
 import '../style/owfont-regular.min.css';
 
+const MODULE_NAME = 'app';
 const DEFAULT_ZIP_CODE = 60661;
 const TYPE = {
   location: 0,
@@ -14,12 +15,9 @@ const TYPE = {
   zipCode: 2
 };
 
-let app = () => {
-  return {
-    template: require('./app.html'),
-    controller: 'AppCtrl',
-    controllerAs: 'app'
-  }
+const app = {
+  template: require('./app.html'),
+  controller: AppCtrl,
 };
 
 function AppCtrl(service) {
@@ -63,11 +61,8 @@ function AppCtrl(service) {
 
 }
 
-const MODULE_NAME = 'app';
-
 angular.module(MODULE_NAME, [])
-  .directive('app', app)
-  .controller('AppCtrl', AppCtrl)
+  .component('app', app)
   .component('wHeader', wHeader)
   .component('wCurrent', wCurrent)
   .component('wForecastItem', wForecastItem)

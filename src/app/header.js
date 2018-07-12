@@ -1,6 +1,5 @@
 module.exports = {
   template: require('./header.html'),
-  controller: HeaderCtrl,
   bindings: {
     loading: '<',
     zipCode: '<',
@@ -8,7 +7,3 @@ module.exports = {
     onClick: '&'
   }
 };
-
-function HeaderCtrl () {
-
-}
