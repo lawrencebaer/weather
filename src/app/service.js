@@ -40,11 +40,6 @@ function airingsService($http, $q) {
       url: fiveDayUrl
     });
 
-    const locationInfo = $http({
-      method: 'GET',
-      url: '//maps.googleapis.com/maps/api/geocode/json?latlng=33.61,-85.83&sensor=true'
-    });
-
     $q.all([currentCall, fiveDayCall]).then((result) => {
       deferred.resolve(mapToModel(result[0].data, result[1].data));
     }, (error) => {

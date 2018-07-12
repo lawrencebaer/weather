@@ -25,15 +25,18 @@ function AppCtrl(service) {
   this.valid = true;
   this.url = 'https://www.linkedin.com/in/lawrencebaer';
 
+  // Show a daytime/nighttime background image
   const hours = (new Date()).getHours();
   this.isNight = hours < 5 || hours > 19;
 
+  // Search bar
   this.onClick = (keyword) => {
     if (keyword) {
       this.getData(isNaN(keyword) ? TYPE.city : TYPE.zipCode, {keyword});
     }
   };
 
+  // Retrieve weather data
   this.getData = (type, data) => {
     this.loading = true;
     service.getWeatherData(type, data).then((result) => {
@@ -48,6 +51,8 @@ function AppCtrl(service) {
     });
   }
 
+  // Attempt to get the user's location
+  // If they do not allow it, use the default zip code (60661)
   navigator.geolocation.getCurrentPosition((position) => {
     this.getData(TYPE.location, {
       latitude: position.coords.latitude,
