@@ -13,5 +13,3 @@ $ npm install
 
 # start the server
 $ npm start
-
-# the site is accessible at localhost, typically port 8080

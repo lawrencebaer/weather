@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-6">
-    <p class="u-4-em">{{$ctrl.weatherData.city}}</p>
+    <p class="u-4-em" ng-if="$ctrl.zipCode">{{$ctrl.weatherData.city}} ({{$ctrl.zipCode}})</p>
+    <p class="u-4-em" ng-if="!$ctrl.zipCode">{{$ctrl.weatherData.city}}</p>
     <img class="c-weather-icon--current" src="http://openweathermap.org/img/w/{{$ctrl.weatherData.statusIcon}}.png" />
     <span class="u-2-em">{{$ctrl.weatherData.status}}</span>
   </div>

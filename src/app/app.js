@@ -45,6 +45,7 @@ function AppCtrl(service) {
     service.getWeatherData(type, data).then((result) => {
       this.weatherData = result;
       this.valid = true;
+      this.zipCode = type === TYPE.zipCode ? data.keyword : null;
     }, (error) => {
       this.valid = false;
       console.log('Failed retrieving weather data - error: ' + JSON.stringify(error, null, 4));
