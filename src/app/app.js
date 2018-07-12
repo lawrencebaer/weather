@@ -32,11 +32,7 @@ function AppCtrl(service) {
 
   this.onClick = (keyword) => {
     if (keyword) {
-      if (isNaN(keyword)) {
-        this.getData(TYPE.city, {keyword});
-      } else {
-        this.getData(TYPE.zipCode, {keyword});
-      }
+      this.getData(isNaN(keyword) ? TYPE.city : TYPE.zipCode, {keyword});
     }
   };
 
